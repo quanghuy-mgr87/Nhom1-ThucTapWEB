@@ -36,7 +36,6 @@ export default {
         { title: "Tottenham 3-2 Vitesse", image: require("@/assets/video3.jpg"), link: "https://video.vnexpress.net/tin-tuc/the-thao/tottenham-3-2-vitesse-4381577.html" },
         { title: "HLV Park lại tráo số áo của cầu thủ Việt Nam", image: require("@/assets/video4.jpg"), link: "https://vnexpress.net/hlv-park-lai-trao-so-ao-cua-cau-thu-viet-nam-4367209.html" },
       ],
-
       listVideoNew: [],
     };
   },

@@ -9,7 +9,7 @@
       </a>
       <a :href="topStory.link" class="top-story__text__description list-news__description">
         <span>{{ topStory.description }}</span>
-      </a>
+      </a>  
     </div>
   </div>
 </template>
@@ -18,10 +18,10 @@ export default {
   data() {
     return {
       topStory: {
-        title: "Liverpool thua trận đầu tiên ở Ngoại hạng Anh",
-        description: "Liverpool thua trận đầu tiên ở Ngoại hạng Anh mùa này, với tỷ số 2-3 trên sân của West Ham ở vòng 11 tối 7/11.",
+        title: "Cafu: 'Về kỹ thuật, Neymar giỏi hơn Messi và Ronaldo'",
+        description: "Theo hậu vệ hai lần vô địch World Cup Cafu, nếu tập trung hết mức cho bóng đá, Neymar có thể vượt Lionel Messi và Cristiano Ronaldo.",
         image: require("../../../../assets/top-story.jpg"),
-        link: "https://vnexpress.net/liverpool-thua-tran-dau-tien-o-ngoai-hang-anh-4382634.html",
+        link: "https://vnexpress.net/bong-da/giai-ngoai-hang-anh",
       },
     };
   },

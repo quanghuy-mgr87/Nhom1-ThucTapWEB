@@ -7,6 +7,7 @@ import PostChampionsLeague from '../components/MainComponents/Post/PostChampions
 import PostLaLiga from '../components/MainComponents/Post/PostLaLiga.vue'
 import PostBundesliga from '../components/MainComponents/Post/PostBundesliga.vue'
 import PostSerieA from '../components/MainComponents/Post/PostSerieA.vue'
+import PostDetail from '../components/MainComponents/PostDetail/PostDetail.vue'
 
 Vue.use(VueRouter);
 
@@ -37,18 +38,13 @@ const routes = [
       {
         path: "serie-a",
         component: PostSerieA
-      }
+      },
     ]
   },
-  // {
-  //   path: "/about",
-  //   name: "About",
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () =>
-  //     import(/* webpackChunkName: "about" */ "../views/About.vue"),
-  // },
+  {
+    path: "/detail",
+    component: PostDetail
+  },
 ];
 
 const router = new VueRouter({
