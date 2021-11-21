@@ -25,6 +25,8 @@ namespace WebBongDaSo.Entities
 
         public DateTime NgayTao { get; set; }
 
+        public DateTime NgayCapNhat { get; set; }
+
         public virtual ChuDe ChuDe { get; set; }
     }
 }

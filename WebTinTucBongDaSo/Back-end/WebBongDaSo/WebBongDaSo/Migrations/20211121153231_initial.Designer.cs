@@ -10,7 +10,7 @@ using WebBongDaSo.Entities;
 namespace WebBongDaSo.Migrations
 {
     [DbContext(typeof(WebBongDaContext))]
-    [Migration("20211121145123_initial")]
+    [Migration("20211121153231_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

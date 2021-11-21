@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebBongDaSo.Entities;
 
 namespace WebBongDaSo.Migrations
 {
     [DbContext(typeof(WebBongDaContext))]
-    partial class WebBongDaContextModelSnapshot : ModelSnapshot
+    [Migration("20211121161200_addNgayCapNhat")]
+    partial class addNgayCapNhat
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
