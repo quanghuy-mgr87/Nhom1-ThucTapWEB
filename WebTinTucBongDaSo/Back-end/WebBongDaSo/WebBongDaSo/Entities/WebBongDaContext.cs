@@ -12,7 +12,7 @@ namespace WebBongDaSo.Entities
         public DbSet<ChuDe> ChuDes { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"data source = .; initial catalog = WebBongDaDB; integrated security = sspi");
+            optionsBuilder.UseSqlServer(@"data source = .\SQLEXPRESS; initial catalog = WebBongDaDB; integrated security = sspi");
         }
     }
 }
