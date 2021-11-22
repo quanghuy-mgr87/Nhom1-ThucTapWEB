@@ -12,5 +12,6 @@ namespace WebBongDaSo.IServices
         bool ThemBaiViet(BaiViet baiViet);
         bool SuaBaiViet(BaiViet baiViet);
         bool XoaBaiViet(BaiViet baiViet);
+        void CapNhatSoLuongBaiViet(ChuDe chuDe);
     }
 }
