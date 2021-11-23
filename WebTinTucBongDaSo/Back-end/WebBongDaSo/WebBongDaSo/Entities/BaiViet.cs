@@ -14,7 +14,7 @@ namespace WebBongDaSo.Entities
         [StringLength(100, ErrorMessage = "Tiêu đề không được quá 100 kí tự")]
         public string TieuDe { get; set; }
 
-        [StringLength(200, ErrorMessage = "Tiêu đề không được quá 200 kí tự")]
+        [StringLength(200, ErrorMessage = "Mô tả không được quá 200 kí tự")]
         public string MoTa { get; set; }
 
         public string LinkAnh { get; set; }
