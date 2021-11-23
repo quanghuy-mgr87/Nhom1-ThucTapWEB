@@ -56,10 +56,10 @@ namespace WebBongDaSo.Services
             }
         }
 
-        public bool XoaChuDe(int maChuDe)
+        public bool XoaChuDe(ChuDe chuDe)
         {
-            ChuDe chuDe = dbContext.ChuDes.SingleOrDefault(x => x.MaChuDe == maChuDe); //tim nhung tk co ma chu de giong voi ma chu de da nhap vao
-            List<BaiViet> lstbaiViet = dbContext.BaiViets.Where(x => x.MaChuDe == maChuDe).ToList();//tim nhung tk bai viet co ma chu de giong voi ma chu de do
+            ChuDe chuDeCanXoa = dbContext.ChuDes.SingleOrDefault(x => x.MaChuDe == chuDe.MaChuDe); //tim nhung tk co ma chu de giong voi ma chu de da nhap vao
+            List<BaiViet> lstbaiViet = dbContext.BaiViets.Where(x => x.MaChuDe == chuDe.MaChuDe).ToList();//tim nhung tk bai viet co ma chu de giong voi ma chu de do
             if(chuDe == null) //neu ko ton tai thi ko xoa dc
             {
                 return false;
