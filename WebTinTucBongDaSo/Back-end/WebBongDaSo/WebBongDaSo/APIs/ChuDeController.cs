@@ -54,16 +54,16 @@ namespace WebBongDaSo.APIs
             }
         }
         [HttpDelete]
-        public IActionResult XoaChuDe(int maChuDe)
+        public IActionResult XoaChuDe(ChuDe chuDe)
         {
-            bool check = chuDeService.XoaChuDe(maChuDe);
+            bool check = chuDeService.XoaChuDe(chuDe);
             if (check == true)
             {
-                return Ok($"Đã xóa chủ đề có mã {maChuDe}");
+                return Ok($"Đã xóa chủ đề có mã {chuDe.MaChuDe}");
             }
             else
             {
-                return BadRequest($"Chủ đề có mã {maChuDe} không tồn tại!");
+                return BadRequest($"Chủ đề có mã {chuDe.MaChuDe} không tồn tại!");
             }
         }
     }

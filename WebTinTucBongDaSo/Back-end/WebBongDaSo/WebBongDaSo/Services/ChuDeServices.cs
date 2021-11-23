@@ -66,10 +66,10 @@ namespace WebBongDaSo.Services
             }
             else if (lstbaiViet.Count > 0) //chu de co ton tai, thi xoa het bai viet
             {
-                dbContext.Remove(lstbaiViet);
+                dbContext.RemoveRange(lstbaiViet);
                 dbContext.SaveChanges();
             }
-            dbContext.Remove(chuDe); // xoa chu de
+            dbContext.Remove(chuDeCanXoa); // xoa chu de
             dbContext.SaveChanges();
             return true;
         }
