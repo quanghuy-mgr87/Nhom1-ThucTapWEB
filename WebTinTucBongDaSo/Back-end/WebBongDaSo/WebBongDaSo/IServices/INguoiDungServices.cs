@@ -11,6 +11,6 @@ namespace WebBongDaSo.IServices
         List<NguoiDung> LayDSNguoiDung();
         bool ThemNguoiDung(NguoiDung nguoiDung);
         bool SuaNguoiDung(NguoiDung nguoiDung);
-        bool XoaNguoiDung(int nguoiDungId);
+        bool XoaNguoiDung(string taiKhoan);
     }
 }
