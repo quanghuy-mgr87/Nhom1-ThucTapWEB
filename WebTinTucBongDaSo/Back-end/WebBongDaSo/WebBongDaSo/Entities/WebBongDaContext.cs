@@ -10,6 +10,10 @@ namespace WebBongDaSo.Entities
     {
         public DbSet<BaiViet> BaiViets { get; set; }
         public DbSet<ChuDe> ChuDes { get; set; }
+        public DbSet<LoaiNguoiDung> LoaiNguoiDungs { get; set; }
+        public DbSet<NguoiDung> NguoiDungs { get; set; }
+        public DbSet<QuyenHan> QuyenHans { get; set; }
+        public DbSet<QuyenHan_LoaiNguoiDung> QuyenHan_LoaiNguoiDungs { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"data source = .; initial catalog = WebBongDaDB; integrated security = sspi");
