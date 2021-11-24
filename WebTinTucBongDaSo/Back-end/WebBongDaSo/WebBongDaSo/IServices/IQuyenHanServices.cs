@@ -9,8 +9,8 @@ namespace WebBongDaSo.IServices
     interface IQuyenHanServices
     {
         List<QuyenHan> LayDSQuyenHan();
-        bool ThemChuDe(QuyenHan quyenHan);
-        bool SuaChuDe(QuyenHan quyenHan);
-        bool XoaChuDe(int quyenHanId);
+        bool ThemQuyenHan(QuyenHan quyenHan);
+        bool SuaQuyenHan(QuyenHan quyenHan);
+        bool XoaQuyenHan(int quyenHanId);
     }
 }

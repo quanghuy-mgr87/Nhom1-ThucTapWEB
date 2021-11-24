@@ -57,6 +57,8 @@ namespace WebBongDaSo.Services
                 baiVietCanSua.NoiDung = baiViet.NoiDung;
                 baiVietCanSua.MaChuDe = baiViet.MaChuDe;
                 baiVietCanSua.NgayCapNhat = DateTime.Now;
+                baiVietCanSua.TenTacGia = baiViet.TenTacGia;
+                baiVietCanSua.TaiKhoanNguoiDang = baiViet.TaiKhoanNguoiDang;
                 dbContext.BaiViets.Update(baiVietCanSua);
                 dbContext.SaveChanges();
                 return true;

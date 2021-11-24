@@ -23,10 +23,10 @@ namespace WebBongDaSo.Entities
 
         public int MaChuDe { get; set; }
 
-        public string TenTacGia { get; set; }   //Thêm vào mục sửa thông tin bài viết
+        public string TenTacGia { get; set; }  
 
         [Required(ErrorMessage = "Tài khoản người đăng không được trống")]
-        public string TaiKhoanNguoiDang { get; set; } //Thêm vào mục sửa thông tin bài viết
+        public string TaiKhoanNguoiDang { get; set; } 
 
         public DateTime NgayTao { get; set; }
 

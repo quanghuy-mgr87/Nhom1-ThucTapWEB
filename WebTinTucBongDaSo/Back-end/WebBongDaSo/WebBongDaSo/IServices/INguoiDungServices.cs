@@ -9,8 +9,8 @@ namespace WebBongDaSo.IServices
     interface INguoiDungServices
     {
         List<NguoiDung> LayDSNguoiDung();
-        bool ThemLoaiNguoiDung(NguoiDung nguoiDung);
-        bool SuaLoaiNguoiDung(NguoiDung nguoiDung);
-        bool XoaLoaiNguoiDung(int nguoiDungId);
+        bool ThemNguoiDung(NguoiDung nguoiDung);
+        bool SuaNguoiDung(NguoiDung nguoiDung);
+        bool XoaNguoiDung(int nguoiDungId);
     }
 }
