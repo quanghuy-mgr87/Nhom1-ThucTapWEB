@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\WebBongDaSo.csproj": {}
+    "D:\\Code\\CodeStudy\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\WebBongDaSo.csproj": {}
   },
   "projects": {
-    "D:\\Github\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\WebBongDaSo.csproj": {
+    "D:\\Code\\CodeStudy\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\WebBongDaSo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\WebBongDaSo.csproj",
+        "projectUniqueName": "D:\\Code\\CodeStudy\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\WebBongDaSo.csproj",
         "projectName": "WebBongDaSo",
-        "projectPath": "D:\\Github\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\WebBongDaSo.csproj",
-        "packagesPath": "C:\\Users\\AULAC.PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Github\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\obj\\",
+        "projectPath": "D:\\Code\\CodeStudy\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\WebBongDaSo.csproj",
+        "packagesPath": "C:\\Users\\quang\\.nuget\\packages\\",
+        "outputPath": "D:\\Code\\CodeStudy\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\AULAC.PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\quang\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
