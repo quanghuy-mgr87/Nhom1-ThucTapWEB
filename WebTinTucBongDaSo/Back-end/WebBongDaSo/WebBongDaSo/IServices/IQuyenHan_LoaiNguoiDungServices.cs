@@ -8,9 +8,9 @@ namespace WebBongDaSo.IServices
 {
     interface IQuyenHan_LoaiNguoiDungServices
     {
-        List<QuyenHan_LoaiNguoiDung> LayDSQuyenHanLoaiNguoiDung();
-        bool ThemQuyenHanLoaiNguoiDung(QuyenHan_LoaiNguoiDung quyenHan_LoaiNguoiDung);
-        bool SuaQuyenHanLoaiNguoiDung(QuyenHan_LoaiNguoiDung quyenHan_LoaiNguoiDung);
-        bool XoaQuyenHanLoaiNguoiDung(int quyenHan_LoaiNguoiDungId);
+        List<QuyenHan_LoaiNguoiDung> LayDSQuyenHan_LoaiNguoiDung();
+        bool ThemQuyenHan_LoaiNguoiDung(QuyenHan_LoaiNguoiDung quyenHan_LoaiNguoiDung);
+        bool SuaQuyenHan_LoaiNguoiDung(QuyenHan_LoaiNguoiDung quyenHan_LoaiNguoiDung);
+        bool XoaQuyenHan_LoaiNguoiDung(int quyenHan_LoaiNguoiDungId);
     }
 }
