@@ -81,6 +81,12 @@ namespace WebBongDaSo.Services
             }
         }
 
+        public BaiViet TimBaiVietTheoMa(int baiVietId)
+        {
+            BaiViet baiViet = dbContext.BaiViets.SingleOrDefault(x => x.MaBaiViet == baiVietId);
+            return baiViet;
+        }
+
         public bool XoaBaiViet(BaiViet baiViet)
         {
             BaiViet baiVietCanXoa = dbContext.BaiViets.SingleOrDefault(x => x.MaBaiViet == baiViet.MaBaiViet);

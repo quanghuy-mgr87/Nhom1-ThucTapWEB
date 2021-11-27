@@ -181,3 +181,6 @@ F:\Mr Cong\Thực tập lập trình web\Nhom1-ThucTapWEB\WebTinTucBongDaSo\Back
 F:\Mr Cong\Thực tập lập trình web\Nhom1-ThucTapWEB\WebTinTucBongDaSo\Back-end\WebBongDaSo\WebBongDaSo\obj\Debug\net5.0\ref\WebBongDaSo.dll
 F:\Mr Cong\Thực tập lập trình web\Nhom1-ThucTapWEB\WebTinTucBongDaSo\Back-end\WebBongDaSo\WebBongDaSo\obj\Debug\net5.0\WebBongDaSo.pdb
 F:\Mr Cong\Thực tập lập trình web\Nhom1-ThucTapWEB\WebTinTucBongDaSo\Back-end\WebBongDaSo\WebBongDaSo\obj\Debug\net5.0\WebBongDaSo.genruntimeconfig.cache
+D:\Code\CodeStudy\Nhom1-ThucTapWEB\WebTinTucBongDaSo\Back-end\WebBongDaSo\WebBongDaSo\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Code\CodeStudy\Nhom1-ThucTapWEB\WebTinTucBongDaSo\Back-end\WebBongDaSo\WebBongDaSo\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Code\CodeStudy\Nhom1-ThucTapWEB\WebTinTucBongDaSo\Back-end\WebBongDaSo\WebBongDaSo\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
