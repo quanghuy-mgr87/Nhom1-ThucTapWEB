@@ -41,7 +41,7 @@ namespace WebBongDaSo.Services
             }
             else
             {
-                dbContext.Add(quyenHanCanThem);
+                dbContext.Add(quyenHan);
                 dbContext.SaveChanges();
                 return true;
             }

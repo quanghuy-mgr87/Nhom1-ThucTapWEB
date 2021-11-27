@@ -42,7 +42,7 @@ namespace WebBongDaSo.Services
             }
             else
             {
-                dbContext.Add(loaiNguoiDungCanThem);
+                dbContext.Add(loaiNguoiDung);
                 dbContext.SaveChanges();
                 return true;
             }

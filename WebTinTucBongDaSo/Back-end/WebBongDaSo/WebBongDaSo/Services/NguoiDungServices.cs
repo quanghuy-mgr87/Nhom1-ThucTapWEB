@@ -46,7 +46,7 @@ namespace WebBongDaSo.Services
             }
             else
             {
-                dbContext.Add(nguoiDungCanThem);
+                dbContext.Add(nguoiDung);
                 dbContext.SaveChanges();
                 return true;
             }
