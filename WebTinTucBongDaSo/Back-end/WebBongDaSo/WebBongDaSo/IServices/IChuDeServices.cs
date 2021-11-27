@@ -11,6 +11,6 @@ namespace WebBongDaSo.IServices
         List<ChuDe> LayDSChuDe(string tenChuDe = "");
         bool ThemChuDe(ChuDe chuDe);
         bool SuaChuDe(ChuDe chuDe);
-        bool XoaChuDe(ChuDe chuDe);
+        bool XoaChuDe(int maChuDe);
     }
 }

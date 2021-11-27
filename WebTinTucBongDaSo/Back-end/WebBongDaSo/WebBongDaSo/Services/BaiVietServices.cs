@@ -87,16 +87,16 @@ namespace WebBongDaSo.Services
             return baiViet;
         }
 
-        public bool XoaBaiViet(BaiViet baiViet)
+        public bool XoaBaiViet(int maBaiViet)
         {
-            BaiViet baiVietCanXoa = dbContext.BaiViets.SingleOrDefault(x => x.MaBaiViet == baiViet.MaBaiViet);
-            ChuDe chuDe = dbContext.ChuDes.SingleOrDefault(x => x.MaChuDe == baiViet.MaChuDe);
+            BaiViet baiVietCanXoa = dbContext.BaiViets.SingleOrDefault(x => x.MaBaiViet == maBaiViet);
             if (baiVietCanXoa == null)
             {
                 return false;
             }
             else
             {
+                ChuDe chuDe = dbContext.ChuDes.SingleOrDefault(x => x.MaChuDe == baiVietCanXoa.MaChuDe);
                 dbContext.BaiViets.Remove(baiVietCanXoa);
                 dbContext.SaveChanges();
                 CapNhatSoLuongBaiViet(chuDe);

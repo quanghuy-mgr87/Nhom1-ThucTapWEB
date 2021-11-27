@@ -12,7 +12,7 @@ namespace WebBongDaSo.IServices
         BaiViet TimBaiVietTheoMa(int baiVietId);
         bool ThemBaiViet(BaiViet baiViet);
         bool SuaBaiViet(BaiViet baiViet);
-        bool XoaBaiViet(BaiViet baiViet);
+        bool XoaBaiViet(int maBaiViet);
         void CapNhatSoLuongBaiViet(ChuDe chuDe);
     }
 }

@@ -12,7 +12,7 @@ namespace WebBongDaSo.Services
         private WebBongDaContext dbContext = new WebBongDaContext();
         public List<ChuDe> LayDSChuDe(string tenChuDe = "")
         {
-            if(tenChuDe == "")
+            if (tenChuDe == "")
             {
                 return dbContext.ChuDes.ToList(); // lay danh sach tat ca chu de
             }
@@ -26,7 +26,7 @@ namespace WebBongDaSo.Services
         public bool SuaChuDe(ChuDe chuDe)
         {
             ChuDe chuDeCanSua = dbContext.ChuDes.SingleOrDefault(x => x.MaChuDe == chuDe.MaChuDe);
-            if(chuDeCanSua == null) // neu khong co chu de can sua
+            if (chuDeCanSua == null) // neu khong co chu de can sua
             {
                 return false;
             }
@@ -44,7 +44,7 @@ namespace WebBongDaSo.Services
         public bool ThemChuDe(ChuDe chuDe)
         {
             ChuDe chuDeCanThem = dbContext.ChuDes.SingleOrDefault(x => x.TenChuDe.ToLower() == chuDe.TenChuDe.ToLower()); // tim thang chu de giong voi chu de dinh them
-            if(chuDeCanThem != null) //neu thang chuDeCanThem ton tai thi tuc la da co chu de day roi
+            if (chuDeCanThem != null) //neu thang chuDeCanThem ton tai thi tuc la da co chu de day roi
             {
                 return false;
             }
@@ -56,11 +56,15 @@ namespace WebBongDaSo.Services
             }
         }
 
-        public bool XoaChuDe(ChuDe chuDe)
+        public bool XoaChuDe(int maChuDe)
         {
-            ChuDe chuDeCanXoa = dbContext.ChuDes.SingleOrDefault(x => x.MaChuDe == chuDe.MaChuDe); //tim nhung tk co ma chu de giong voi ma chu de da nhap vao
-            List<BaiViet> lstbaiViet = dbContext.BaiViets.Where(x => x.MaChuDe == chuDe.MaChuDe).ToList();//tim nhung tk bai viet co ma chu de giong voi ma chu de do
-            if(chuDe == null) //neu ko ton tai thi ko xoa dc
+            ChuDe chuDeCanXoa = dbContext.ChuDes.SingleOrDefault(x => x.MaChuDe == maChuDe); //tim nhung tk co ma chu de giong voi ma chu de da nhap vao
+            List<BaiViet> lstbaiViet = new List<BaiViet>();
+            if (chuDeCanXoa != null)
+            {
+                lstbaiViet = dbContext.BaiViets.Where(x => x.MaChuDe == maChuDe).ToList();//tim nhung tk bai viet co ma chu de giong voi ma chu de do
+            }
+            if (chuDeCanXoa == null) //neu ko ton tai thi ko xoa dc
             {
                 return false;
             }
