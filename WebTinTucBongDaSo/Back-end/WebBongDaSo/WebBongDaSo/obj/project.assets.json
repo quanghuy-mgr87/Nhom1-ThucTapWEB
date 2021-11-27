@@ -5980,19 +5980,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\AULAC.PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Mr Cong\\Thực tập lập trình web\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\WebBongDaSo.csproj",
+      "projectUniqueName": "D:\\Github\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\WebBongDaSo.csproj",
       "projectName": "WebBongDaSo",
-      "projectPath": "F:\\Mr Cong\\Thực tập lập trình web\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\WebBongDaSo.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "F:\\Mr Cong\\Thực tập lập trình web\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\obj\\",
+      "projectPath": "D:\\Github\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\WebBongDaSo.csproj",
+      "packagesPath": "C:\\Users\\AULAC.PC\\.nuget\\packages\\",
+      "outputPath": "D:\\Github\\Nhom1-ThucTapWEB\\WebTinTucBongDaSo\\Back-end\\WebBongDaSo\\WebBongDaSo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\AULAC.PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6061,7 +6061,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
