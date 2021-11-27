@@ -65,16 +65,16 @@ namespace WebBongDaSo.APIs
             }
         }
         [HttpDelete]
-        public IActionResult XoaBaiViet(BaiViet baiViet)
+        public IActionResult XoaBaiViet(int maBaiViet)
         {
-            bool check = baiVietServices.XoaBaiViet(baiViet);
+            bool check = baiVietServices.XoaBaiViet(maBaiViet);
             if (check == true)
             {
-                return Ok($"Đã xóa bài viết có mã {baiViet.MaBaiViet}");
+                return Ok($"Đã xóa bài viết có mã {maBaiViet}");
             }
             else
             {
-                return BadRequest($"Bài viết có mã {baiViet.MaBaiViet} không tồn tại!");
+                return BadRequest($"Bài viết có mã {maBaiViet} không tồn tại!");
             }
         }
     }
