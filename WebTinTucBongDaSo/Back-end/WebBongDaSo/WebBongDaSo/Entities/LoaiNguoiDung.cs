@@ -9,6 +9,9 @@ namespace WebBongDaSo.Entities
     public class LoaiNguoiDung
     {
         public int LoaiNguoiDungId { get; set; }
+        [Required]
+        [StringLength(10,ErrorMessage = "Mã loại không được quá 10 kí tự")]
+        public string MaLoai { get; set; }
 
         [StringLength(20,ErrorMessage = "Tên loại không được quá 20 kí tự")]
         public string TenLoai { get; set; }

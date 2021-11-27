@@ -19,7 +19,7 @@ namespace WebBongDaSo.Services
         public bool SuaLoaiNguoiDung(LoaiNguoiDung loaiNguoiDung)
         {
             LoaiNguoiDung loaiNguoiDungCanSua = dbContext.LoaiNguoiDungs.SingleOrDefault(x => x.LoaiNguoiDungId == loaiNguoiDung.LoaiNguoiDungId);
-            if(loaiNguoiDungCanSua == null) // khong co khong sua duoc
+            if (loaiNguoiDungCanSua == null) // khong co khong sua duoc
             {
                 return false;
             }
@@ -35,13 +35,14 @@ namespace WebBongDaSo.Services
 
         public bool ThemLoaiNguoiDung(LoaiNguoiDung loaiNguoiDung)
         {
-            LoaiNguoiDung loaiNguoiDungCanThem = dbContext.LoaiNguoiDungs.SingleOrDefault(x => x.TenLoai.ToLower() == loaiNguoiDung.TenLoai.ToLower());
-            if(loaiNguoiDungCanThem != null)
+            LoaiNguoiDung loaiNguoiDungCanThem = dbContext.LoaiNguoiDungs.SingleOrDefault(x => x.MaLoai.ToLower() == loaiNguoiDung.MaLoai.ToLower());
+            if (loaiNguoiDungCanThem != null)
             {
                 return false;
             }
             else
             {
+                loaiNguoiDung.MaLoai = loaiNguoiDung.MaLoai.ToUpper();
                 dbContext.Add(loaiNguoiDung);
                 dbContext.SaveChanges();
                 return true;
@@ -53,11 +54,11 @@ namespace WebBongDaSo.Services
             LoaiNguoiDung loaiNguoiDungCanXoa = dbContext.LoaiNguoiDungs.SingleOrDefault(x => x.LoaiNguoiDungId == loaiNguoiDungId);
             List<NguoiDung> lstNguoiDung = dbContext.NguoiDungs.Where(x => x.LoaiNguoiDungId == loaiNguoiDungId).ToList();
             // xoa ca bai viet
-            if(loaiNguoiDungCanXoa == null) // ko ton tai ko xoa duoc
+            if (loaiNguoiDungCanXoa == null) // ko ton tai ko xoa duoc
             {
                 return false;
             }
-            else if(lstNguoiDung.Count > 0) //neu co nguoi dung thuoc loai nguoi dung do thi xoa luon
+            else if (lstNguoiDung.Count > 0) //neu co nguoi dung thuoc loai nguoi dung do thi xoa luon
             {
                 dbContext.RemoveRange(lstNguoiDung);
                 dbContext.SaveChanges();
