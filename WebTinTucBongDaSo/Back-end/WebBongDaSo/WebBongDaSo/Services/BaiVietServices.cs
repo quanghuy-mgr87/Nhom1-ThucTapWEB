@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -27,17 +28,24 @@ namespace WebBongDaSo.Services
             dbContext.SaveChanges();
         }
 
-        public List<BaiViet> LayDSBaiViet(string tieuDe = "")
+        public List<BaiViet> LayDSBaiViet(string tieuDe = "", string taiKhoan = "", int maChuDe = 0)
         {
-            if (tieuDe == "")
+            var lstbaiViet = dbContext.BaiViets.ToList();
+            if (maChuDe != 0)   //Nếu mã chủ đề khác 0 thì lấy danh sách theo mã chủ đề
             {
-                return dbContext.BaiViets.ToList();
+                lstbaiViet = lstbaiViet.Where(x => x.MaChuDe == maChuDe).ToList();
             }
-            else
+            if (!string.IsNullOrEmpty(tieuDe))   //Nếu tiêu đề không rỗng
             {
-                List<BaiViet> lstbaiViet = dbContext.BaiViets.Where(x => x.TieuDe.ToLower().Contains(tieuDe.ToLower())).ToList();
-                return lstbaiViet;
+                //Lấy danh sách bài viết theo tiêu đề
+                lstbaiViet = lstbaiViet.Where(x => x.TieuDe.ToLower().Contains(tieuDe.ToLower())).ToList();
             }
+            if (!string.IsNullOrEmpty(taiKhoan))    //Nếu tài khoản không rỗng
+            {
+                //Lấy danh sách bài viết theo tài khoản
+                lstbaiViet = lstbaiViet.Where(x => x.TaiKhoanNguoiDang == taiKhoan).ToList();
+            }
+            return lstbaiViet;
         }
 
         public bool SuaBaiViet(BaiViet baiViet)
@@ -85,6 +93,8 @@ namespace WebBongDaSo.Services
 
         public BaiViet TimBaiVietMoiNhat()
         {
+            if (dbContext.BaiViets.ToList().Count == 0)
+                return null;
             return dbContext.BaiViets.OrderBy(x => x.MaBaiViet).Last();
         }
 

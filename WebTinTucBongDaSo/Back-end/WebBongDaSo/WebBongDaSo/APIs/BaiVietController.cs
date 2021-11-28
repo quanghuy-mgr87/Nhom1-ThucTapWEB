@@ -15,9 +15,9 @@ namespace WebBongDaSo.APIs
     {
         private BaiVietServices baiVietServices = new BaiVietServices();
         [HttpGet]
-        public IActionResult LayDSBaiViet()
+        public IActionResult LayDSBaiViet(string tieuDe = "", string taiKhoan = "", int maChuDe = 0)
         {
-            var lstBaiViet = baiVietServices.LayDSBaiViet();
+            var lstBaiViet = baiVietServices.LayDSBaiViet(tieuDe, taiKhoan, maChuDe);
             if (lstBaiViet.Count > 0)
             {
                 return Ok(lstBaiViet);
