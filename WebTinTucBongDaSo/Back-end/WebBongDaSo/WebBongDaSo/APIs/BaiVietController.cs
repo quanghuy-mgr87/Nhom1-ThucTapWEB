@@ -29,6 +29,21 @@ namespace WebBongDaSo.APIs
         }
 
         [HttpGet]
+        [Route("bai-viet-moi-nhat")]
+        public IActionResult TimBaiVietMoiNhat()
+        {
+            var baiViet = baiVietServices.TimBaiVietMoiNhat();
+            if (baiViet != null)
+            {
+                return Ok(baiViet);
+            }
+            else
+            {
+                return BadRequest("Danh sách trống");
+            }
+        }
+
+        [HttpGet]
         [Route("chi-tiet-bai-viet")]
         public IActionResult TimBaiVietTheoMa(int baiVietId)
         {

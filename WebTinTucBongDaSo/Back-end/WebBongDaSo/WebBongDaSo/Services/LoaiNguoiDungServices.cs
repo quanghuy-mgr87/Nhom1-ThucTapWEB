@@ -16,6 +16,11 @@ namespace WebBongDaSo.Services
             return dbContext.LoaiNguoiDungs.ToList();
         }
 
+        public LoaiNguoiDung LayLoaiNguoiDungTheoMa(int loaiNguoiDungId)
+        {
+            return dbContext.LoaiNguoiDungs.Find(loaiNguoiDungId);
+        }
+
         public bool SuaLoaiNguoiDung(LoaiNguoiDung loaiNguoiDung)
         {
             LoaiNguoiDung loaiNguoiDungCanSua = dbContext.LoaiNguoiDungs.SingleOrDefault(x => x.LoaiNguoiDungId == loaiNguoiDung.LoaiNguoiDungId);

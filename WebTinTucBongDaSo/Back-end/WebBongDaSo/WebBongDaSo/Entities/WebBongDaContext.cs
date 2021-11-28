@@ -16,7 +16,7 @@ namespace WebBongDaSo.Entities
         public DbSet<QuyenHan_LoaiNguoiDung> QuyenHan_LoaiNguoiDungs { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"data source = .; initial catalog = WebBongDaDB; integrated security = sspi");
+            optionsBuilder.UseSqlServer(@"data source = LAPTOP-3P0EEUAO; initial catalog = WebBongDaDB; integrated security = sspi");
         }
     }
 }

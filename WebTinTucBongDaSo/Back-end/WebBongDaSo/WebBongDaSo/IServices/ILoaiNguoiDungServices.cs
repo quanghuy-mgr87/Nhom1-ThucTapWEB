@@ -9,6 +9,7 @@ namespace WebBongDaSo.IServices
     interface ILoaiNguoiDungServices
     {
         List<LoaiNguoiDung> LayDSLoaiNguoiDung();
+        LoaiNguoiDung LayLoaiNguoiDungTheoMa(int loaiNguoiDungId);
         bool ThemLoaiNguoiDung(LoaiNguoiDung loaiNguoiDung);
         bool SuaLoaiNguoiDung(LoaiNguoiDung loaiNguoiDung);
         bool XoaLoaiNguoiDung(int loaiNguoiDungId);

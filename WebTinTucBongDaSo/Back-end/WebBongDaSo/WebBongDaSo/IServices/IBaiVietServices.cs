@@ -10,6 +10,7 @@ namespace WebBongDaSo.IServices
     {
         List<BaiViet> LayDSBaiViet(string tieuDe = "");
         BaiViet TimBaiVietTheoMa(int baiVietId);
+        BaiViet TimBaiVietMoiNhat();
         bool ThemBaiViet(BaiViet baiViet);
         bool SuaBaiViet(BaiViet baiViet);
         bool XoaBaiViet(int maBaiViet);

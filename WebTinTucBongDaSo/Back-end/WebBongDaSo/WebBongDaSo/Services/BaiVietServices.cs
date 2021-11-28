@@ -74,11 +74,18 @@ namespace WebBongDaSo.Services
             }
             else
             {
+                baiViet.NgayTao = DateTime.Now;
+                baiViet.NgayCapNhat = DateTime.Now;
                 dbContext.BaiViets.Add(baiViet);
                 dbContext.SaveChanges();
                 CapNhatSoLuongBaiViet(chuDe);
                 return true;
             }
+        }
+
+        public BaiViet TimBaiVietMoiNhat()
+        {
+            return dbContext.BaiViets.OrderBy(x => x.MaBaiViet).Last();
         }
 
         public BaiViet TimBaiVietTheoMa(int baiVietId)
