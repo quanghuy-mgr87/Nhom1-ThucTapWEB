@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="list-post">
-      <a :href="item.link" v-for="(item, index) in bundesligaNew" :key="index"><i class="fa fa-paper-plane mr-2" aria-hidden="true"></i>{{ item.title }}</a>
+      <a :href="item.link" v-for="(item, index) in bundesligaNew" :key="index"><i class="fa fa-newspaper mr-2" aria-hidden="true"></i>{{ item.title }}</a>
     </div>
   </div>
 </template>

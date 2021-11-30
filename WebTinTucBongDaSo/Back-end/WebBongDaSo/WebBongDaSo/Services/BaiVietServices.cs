@@ -28,7 +28,7 @@ namespace WebBongDaSo.Services
             dbContext.SaveChanges();
         }
 
-        public List<BaiViet> LayDSBaiViet(string tieuDe = "", string taiKhoan = "", int maChuDe = 0)
+        public List<BaiViet> LayDSBaiViet(Pagination pagination = null, string tieuDe = "", string taiKhoan = "", int maChuDe = 0)
         {
             var lstbaiViet = dbContext.BaiViets.ToList();
             if (maChuDe != 0)   //Nếu mã chủ đề khác 0 thì lấy danh sách theo mã chủ đề
@@ -44,6 +44,10 @@ namespace WebBongDaSo.Services
             {
                 //Lấy danh sách bài viết theo tài khoản
                 lstbaiViet = lstbaiViet.Where(x => x.TaiKhoanNguoiDang == taiKhoan).ToList();
+            }
+            if (pagination != null)
+            {
+                lstbaiViet = lstbaiViet.Skip((pagination.PageNumber - 1) * pagination.PageSize).Take(pagination.PageSize).ToList();
             }
             return lstbaiViet;
         }
@@ -93,7 +97,7 @@ namespace WebBongDaSo.Services
 
         public BaiViet TimBaiVietMoiNhat()
         {
-            if (dbContext.BaiViets.ToList().Count == 0)
+            if (dbContext.BaiViets.ToList().Count() == 0)
                 return null;
             return dbContext.BaiViets.OrderBy(x => x.MaBaiViet).Last();
         }

@@ -46,8 +46,8 @@
           <div class="footer__contact__download-app">
             <p>Tải ứng dụng</p>
             <div class="d-flex justify-space-between">
-              <v-btn outlined class="btn footer__contact__download-app__button"><v-img class="btn__image" src="../../assets/vnex-logo.png" alt=""></v-img>VnExpress</v-btn>
-              <v-btn outlined class="btn footer__contact__download-app__button"><v-img class="btn__image" src="../../assets/vnex-logo.png" alt=""></v-img>International</v-btn>
+              <v-btn outlined class="btn footer__contact__download-app__button"><v-img class="btn__image" src="../../assets/avatar.png" alt=""></v-img>Bongdanet</v-btn>
+              <v-btn outlined class="btn footer__contact__download-app__button"><v-img class="btn__image" src="../../assets/avatar.png" alt=""></v-img>International</v-btn>
             </div>
           </div>
           <div class="footer__contact__contact-link">

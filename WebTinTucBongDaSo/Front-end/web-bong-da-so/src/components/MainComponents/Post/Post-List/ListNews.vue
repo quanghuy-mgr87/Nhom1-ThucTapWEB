@@ -2,32 +2,48 @@
   <div>
     <div class="list-story list-news d-flex" v-for="(item, index) in listStory" :key="index">
       <div class="list-story__text">
-        <a :href="item.link" class="list-story__text__title list-news__title">
-          <h1>{{ item.title }}</h1>
+        <a :href="`/chi-tiet-bai-viet?baiVietId=${item.maBaiViet}`" class="list-story__text__title list-news__title">
+          <h1>{{ item.tieuDe }}</h1>
         </a>
-        <a :href="item.link" class="list-story__text__description list-news__description">
-          <span>{{ item.description }}</span>
+        <a :href="`/chi-tiet-bai-viet?baiVietId=${item.maBaiViet}`" class="list-story__text__description list-news__description">
+          <span>{{ item.moTa }}</span>
         </a>
       </div>
       <div class="list-story__image">
-        <img :src="item.image" alt="" />
+        <img :src="require('@/assets/' + item.linkAnh)" alt="" />
       </div>
     </div>
   </div>
 </template>
 <script>
+import axios from "axios";
+import { eventBus } from "@/main.js";
 export default {
+  created() {
+    this.LayDanhSachBaiViet(1);
+    eventBus.$on("MovePage", this.MovePage);
+  },
   data() {
     return {
-      listStory: [
-        {
-          title: "Ferdinand: 'Solskjaer nên ngẩng cao đầu rời Man Utd'",
-          description: "Không muốn tự dối lòng, cựu trung vệ Rio Ferdinand thừa nhận rằng đồng đội cũ Ole Gunnar Solskjaer không thể giúp Man Utd cạnh tranh danh hiệu.",
-          image: require("../../../../assets/post-list.jpg"),
-          link: "/detail",
-        },
-      ],
+      listStory: [],
     };
+  },
+
+  methods: {
+    //#region Axios
+    LayDanhSachBaiViet(page) {
+      axios.get(`https://localhost:44379/api/baiViet?pageNumber=${page}&pageSize=${13}`).then((res) => {
+        this.listStory = res.data;
+      });
+    },
+
+    MovePage(page) {
+      this.LayDanhSachBaiViet(page);
+    },
+    //#endregion
+
+    //#region Methods
+    //#endregion
   },
 };
 </script>

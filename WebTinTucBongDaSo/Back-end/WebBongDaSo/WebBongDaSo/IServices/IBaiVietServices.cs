@@ -8,7 +8,7 @@ namespace WebBongDaSo.IServices
 {
     interface IBaiVietServices
     {
-        List<BaiViet> LayDSBaiViet(string tieuDe = "", string taiKhoan = "", int maChuDe = 0);
+        List<BaiViet> LayDSBaiViet(Pagination pagination = null, string tieuDe = "", string taiKhoan = "", int maChuDe = 0);
         BaiViet TimBaiVietTheoMa(int baiVietId);
         BaiViet TimBaiVietMoiNhat();
         bool ThemBaiViet(BaiViet baiViet);

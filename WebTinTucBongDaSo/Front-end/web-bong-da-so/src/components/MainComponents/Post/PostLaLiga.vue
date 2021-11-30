@@ -7,7 +7,6 @@
       </div>
       <div class="right-col">
         <box-tin-moi></box-tin-moi>
-        <hot-news-video></hot-news-video>
         <hot-news-list></hot-news-list>
       </div>
     </div>
@@ -18,7 +17,6 @@
 import TopStory from "./Post-List/TopStory.vue";
 import ListNews from "./Post-List/ListNews.vue";
 import BoxTinMoi from "./Post-HotNews/BoxTinMoi.vue";
-import HotNewsVideo from "./Post-HotNews/HotNewsVideo.vue";
 import HotNewsList from "./Post-HotNews/HotNewsList.vue";
 import PostPagination from "./Post-Pagination/PostPagination.vue";
 export default {
@@ -26,7 +24,6 @@ export default {
     TopStory,
     ListNews,
     BoxTinMoi,
-    HotNewsVideo,
     HotNewsList,
     PostPagination,
   },

@@ -15,9 +15,13 @@ namespace WebBongDaSo.APIs
     {
         private BaiVietServices baiVietServices = new BaiVietServices();
         [HttpGet]
-        public IActionResult LayDSBaiViet(string tieuDe = "", string taiKhoan = "", int maChuDe = 0)
+        public IActionResult LayDSBaiViet(int pageNumber = 1, int pageSize = int.MaxValue, string tieuDe = "", string taiKhoan = "", int maChuDe = 0)
         {
-            var lstBaiViet = baiVietServices.LayDSBaiViet(tieuDe, taiKhoan, maChuDe);
+            Pagination pagination = new Pagination();
+            pagination.PageNumber = pageNumber;
+            pagination.PageSize = pageSize;
+
+            var lstBaiViet = baiVietServices.LayDSBaiViet(pagination, tieuDe, taiKhoan, maChuDe);
             if (lstBaiViet.Count > 0)
             {
                 return Ok(lstBaiViet);
@@ -66,6 +70,7 @@ namespace WebBongDaSo.APIs
                 return BadRequest($"Bài viết có mã bài viết là {baiVietUpdate.MaBaiViet} không tồn tại !");
             }
         }
+
         [HttpPost]
         public IActionResult ThemBaiViet(BaiViet baiViet)
         {
@@ -79,6 +84,7 @@ namespace WebBongDaSo.APIs
                 return BadRequest($"Tên bài viết {baiViet.TieuDe} đã tồn tại!");
             }
         }
+
         [HttpDelete]
         public IActionResult XoaBaiViet(int maBaiViet)
         {

@@ -2,16 +2,16 @@
   <div class="container footer-page">
     <div class="footer__container copyright">
       <p>
-        <a href="https://vnexpress.net/">
-          <img src="../../assets/logo.svg" alt="" />
+        <a href="/">
+          <img src="../../assets/vnex-logo.png" alt="" />
         </a>
       </p>
       <div class="footer__container__right-flexbox">
         <a href="">RSS</a>
-        <span>Theo dõi VnExpress trên</span>
-        <a class="social" href="https://www.facebook.com/congdongvnexpress/"><i class="fab fa-facebook-f"></i></a>
-        <a class="social" href="https://twitter.com/VnEnews"><i class="fab fa-twitter"></i></a>
-        <a class="social" href="https://www.youtube.com/channel/UCVRqZH5QnrnbMWhElPBD-MQ"><i class="fab fa-youtube"></i></a>
+        <span>Theo dõi Bongdanet trên</span>
+        <a class="social" href="/"><i class="fab fa-facebook-f"></i></a>
+        <a class="social" href="/"><i class="fab fa-twitter"></i></a>
+        <a class="social" href="/"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
   </div>

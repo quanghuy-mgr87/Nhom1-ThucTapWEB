@@ -1,29 +1,39 @@
 <template>
   <div class="top-story list-news d-flex">
     <div class="top-story__image">
-      <img :src="topStory.image" alt="" />
+      <img :src="require('@/assets/' + topStory.linkAnh)" alt="" />
     </div>
     <div class="top-story__text">
-      <a :href="topStory.link" class="top-story__text__title list-news__title">
-        <h1>{{ topStory.title }}</h1>
+      <a :href="`/chi-tiet-bai-viet?baiVietId=${topStory.maBaiViet}`" class="top-story__text__title list-news__title">
+        <h1>{{ topStory.tieuDe }}</h1>
       </a>
-      <a :href="topStory.link" class="top-story__text__description list-news__description">
-        <span>{{ topStory.description }}</span>
-      </a>  
+      <a :href="`/chi-tiet-bai-viet?baiVietId=${topStory.maBaiViet}`" class="top-story__text__description list-news__description">
+        <span>{{ topStory.moTa }}</span>
+      </a>
     </div>
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
+  created() {
+    this.LayBaiVietMoiNhat();
+  },
+
   data() {
     return {
-      topStory: {
-        title: "Cafu: 'Về kỹ thuật, Neymar giỏi hơn Messi và Ronaldo'",
-        description: "Theo hậu vệ hai lần vô địch World Cup Cafu, nếu tập trung hết mức cho bóng đá, Neymar có thể vượt Lionel Messi và Cristiano Ronaldo.",
-        image: require("../../../../assets/top-story.jpg"),
-        link: "https://vnexpress.net/bong-da/giai-ngoai-hang-anh",
-      },
+      topStory: {},
     };
+  },
+
+  methods: {
+    //#region Axios
+    LayBaiVietMoiNhat() {
+      axios.get("https://localhost:44379/api/baiViet/bai-viet-moi-nhat").then((res) => {
+        this.topStory = res.data;
+      });
+    },
+    //#endregion
   },
 };
 </script>

@@ -13,7 +13,7 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/bong-da",
+    path: "/",
     name: "Posts",
     component: Posts,
     children: [
@@ -36,13 +36,29 @@ const routes = [
         component: PostBundesliga
       },
       {
-        path: "serie-a",
+        path: "league-1",
         component: PostSerieA
       },
+      {
+        path: "v-league",
+        component: PostSerieA
+      },
+      {
+        path: "j-league",
+        component: PostSerieA
+      },
+      {
+        path: "k-league",
+        component: PostSerieA
+      },
+      {
+        path: "serie-a",
+        component: PostSerieA
+      }
     ]
   },
   {
-    path: "/detail",
+    path: "/chi-tiet-bai-viet",
     component: PostDetail
   },
 ];

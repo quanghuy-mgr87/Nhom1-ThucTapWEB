@@ -51,9 +51,9 @@ namespace WebBongDaSo.Services
                 nguoiDungCanSua.MatKhau = nguoiDung.MatKhau;
                 nguoiDungCanSua.HoTen = nguoiDung.HoTen;
                 nguoiDungCanSua.GioiTinh = nguoiDung.GioiTinh;
-                nguoiDung.DiaChi = nguoiDung.DiaChi;
+                nguoiDungCanSua.DiaChi = nguoiDung.DiaChi;
                 //khong duoc sua thoi gian tham gia
-                nguoiDung.LoaiNguoiDungId = nguoiDung.LoaiNguoiDungId;
+                nguoiDungCanSua.LoaiNguoiDungId = nguoiDung.LoaiNguoiDungId;
                 dbContext.Update(nguoiDungCanSua);
                 dbContext.SaveChanges();
                 return true;

@@ -5,15 +5,22 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "node server.js"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^31.0.0",
+    "@ckeditor/ckeditor5-vue2": "^1.0.5",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^2.0.6",
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
     "moment": "^2.29.1",
+    "server-static": "^2.0.5",
     "vue": "^2.6.11",
+    "vue-axios": "^3.4.0",
     "vue-backtotop": "^1.6.1",
     "vue-moment": "^4.1.0",
     "vue-router": "^3.2.0",
